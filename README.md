@@ -11,8 +11,8 @@
 
 For this example we have a scenario, let suppose we have to register/add a new user to our site. when the admin register/add the new user there are multipe events which needs to be handled, in this scenario we have the following two scenario:
 
-- [User Need to welcomed through welcome email].
-- [Admin will be notified that a new user is being registered into your site].
+- User Need to welcomed through welcome email.
+- Admin will be notified that a new user is being registered into your site.
 
 
 So we are basically creating an event which is resposible to trigger those two events using listeners.
@@ -41,6 +41,7 @@ npm run dev
 php artisan serve
 # open another terminal/cmd tab and run this command to run the queue
 php artisan queue:work
+```
 
 ## Code | Developer
 
