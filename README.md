@@ -17,20 +17,30 @@ For this example we have a scenario, let suppose we have to register/add a new u
 
 So we are basically creating an event which is resposible to trigger those two events using listeners.
 These are the main files which we are working in for the events and listerens with queues.
---App
----Events
-----Registration
------NewUserRegistrationEvent.php
----Jobs
-----NewUserRegisteredAdminMailJob.php
-----NewUserRegisteredWelcomeMailJob.php
----Listeners
-----Registration
------NewUserEmailListener.php
------NewUserSendSlackNotificationListener.php
----Mail
-----NewUserRegisteredAdminMail.php
-----NewUserRegisteredWelcomeMail.php
+1. App
+   - Events
+     - Registration
+       - NewUserRegistrationEvent.php
+   - Jobs
+        - NewUserRegisteredAdminMailJob.php
+        - NewUserRegisteredWelcomeMailJob.php
+    - Listeners
+        - Registration
+            - NewUserEmailListener.php
+            - NewUserSendSlackNotificationListener.php
+    - Mail
+        - NewUserRegisteredAdminMail.php
+        - NewUserRegisteredWelcomeMail.php
+
+## Some basic Git commands to run the project | after importing or cloning this project into your local directory:
+```
+npm install
+composer install
+npm run dev
+# to run the server
+php artisan serve
+# open another terminal/cmd tab and run this command to run the queue
+php artisan queue:work
 
 ## Code | Developer
 
